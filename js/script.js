@@ -4,4 +4,4 @@ const isChecked = true,
         isClose = true;
 
         console.log(isChecked && isClose != true);
- 
+ const obj = {};
