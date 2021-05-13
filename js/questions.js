@@ -20,12 +20,12 @@ const personaMovieDb = {
     privat: false
 };
 
-const lastFilm1 = prompt('Один из последних просмотренных фильмов?', ''),
-      ratingFilm = prompt('На сколько оцените его?', ''),
-      lastFilm2 = prompt('Один из последних просмотренных фильмов?', ''),
-      ratingFilm2 = prompt('На сколько оцените его?', '');
+      for (let i = 0; i < 2; i++){
+        const lastFilm1 = prompt('Один из последних просмотренных фильмов?', ''),
+              ratingFilm = prompt('На сколько оцените его?', '');
 
-      personaMovieDb.movies[lastFilm1] = ratingFilm;
-      personaMovieDb.movies[lastFilm2] = ratingFilm2;
+        personaMovieDb.movies[lastFilm1] = i;
+      }
+
 
 console.log(personaMovieDb);
