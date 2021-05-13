@@ -24,7 +24,12 @@ const personaMovieDb = {
         const lastFilm1 = prompt('Один из последних просмотренных фильмов?', ''),
               ratingFilm = prompt('На сколько оцените его?', '');
 
-        personaMovieDb.movies[lastFilm1] = i;
+        if (lastFilm1 != null && ratingFilm != null && lastFilm1.length < 50 && lastFilm1 != "" ){
+          personaMovieDb.movies[lastFilm1] = ratingFilm;
+        }else{
+          console.log("Ошибка: заполните всё правильно");
+          i--;
+        }
       }
 
 
