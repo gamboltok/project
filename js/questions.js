@@ -46,7 +46,7 @@ const personaMovieDb = {
       },
       writeYourGenres: function(){
         for(let i = 0; i < 3; i++){
-          let question = prompt(`Ваш любимый жанр №${i+1}?`, "");
+          let question = prompt(`Ваш любимый жанр №${i+1}?`, "").toUpperCase();
             if(question == "" || question == null){
               console.log("заполните правильно");
               i--;
