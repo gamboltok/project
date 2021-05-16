@@ -1,15 +1,25 @@
 "use strict";
-//Task 1
 
-let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", ""),
-    userAnswerBlock = document.createElement('div'),
-    heading = document.createElement('h2');
+let numberOfFilms;
 
-userAnswerBlock.classList.add('block'); //create class block
-heading.classList.add('message');       //create class message
-heading.textContent = numberOfFilms;
-document.body.appendChild(userAnswerBlock);
-userAnswerBlock.appendChild(heading);
+function start(){
+  numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+  let userAnswerBlock = document.createElement('div'),
+      heading = document.createElement('h2');
+
+        userAnswerBlock.classList.add('block'); //create class block
+        heading.classList.add('message');       //create class message
+
+          heading.textContent = numberOfFilms;
+          document.body.appendChild(userAnswerBlock);
+          userAnswerBlock.appendChild(heading);
+
+            while(numberOfFilms == "" ||numberOfFilms == null || isNaN(numberOfFilms)){
+              numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+            }
+}
+
+start();
 
 //Task 2 & 3 combined
 const personaMovieDb = {
@@ -32,5 +42,21 @@ const personaMovieDb = {
         }
       }
 
+function showMyDb(status){
+  if(!status){
+    console.log(personaMovieDb);
+  }else{
+    console.log("personaMovieDb приватная");
+  }
+}
 
-console.log(personaMovieDb);
+function whiteYourGenres(){
+  let arr = [];
+    for(let i = 0; i < 3; i++){
+      let question = prompt("Ваш любимый жанр?", "");
+      personaMovieDb.genres[i] = question;
+    }
+}
+
+showMyDb(personaMovieDb.privat);
+whiteYourGenres();

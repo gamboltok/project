@@ -1,10 +1,5 @@
 "use strict";
 
-const isChecked = true,
-        isClose = true;
+import {a} from "js/module.js";
 
-        console.log(isChecked && isClose != true);
- 
- const obj = {
-         o:1
- };
+console.log(a);
