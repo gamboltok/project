@@ -46,13 +46,14 @@ const personaMovieDb = {
       },
       writeYourGenres: function(){
         for(let i = 0; i < 3; i++){
-          let question = prompt(`Ваш любимый жанр №${i+1}?`, "").toUpperCase();
+          let question = prompt(`Ваш любимый жанр №${i+1}?`, "").toLowerCase();
             if(question == "" || question == null){
               console.log("заполните правильно");
               i--;
               let question = prompt(`Ваш любимый жанр №${i+1}?`, "");
             }else{
               personaMovieDb.genres[i] = question;
+              personaMovieDb.genres.sort();
             }
         }
         personaMovieDb.genres.forEach((value, i) => {
