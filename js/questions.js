@@ -45,7 +45,6 @@ const personaMovieDb = {
         }
       },
       writeYourGenres: function(){
-        let arr = [];
         for(let i = 0; i < 3; i++){
           let question = prompt(`Ваш любимый жанр №${i+1}?`, "");
             if(question == "" || question == null){
